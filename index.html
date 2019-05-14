@@ -127,16 +127,14 @@
             }
           
 			.trBorder {
-			  font-size: 2vw;
-  			height: auto;
-    		width: 25% fixed;
-    		color: red;
-    		background: rgba(253,255,255,.1);
-    		 position: fixed;
-    		 top: 15%;
-
-    		 background-size: 100% auto;
-			}
+			position: fixed; /* Position the background text */
+  top: 15%; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 25%; /* Full width */
+  
+    				}
             /*SLIDESHOW*/
             .layer1, .layer2, .layer3 {
                 position: fixed;
