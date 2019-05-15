@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Javascript String</title>
+	<title>Umaid Ali Khalid</title>
 	<meta charset="UTF-8"/>
 	<style type="text/css">
-		 #wd-navbar {
+     #wd-navbar {
         position: fixed;
         top: 0;
         left: 0;
@@ -12,8 +12,7 @@
         border-bottom: 2px solid #ccc;
         background: #f9f9f9;
       }
-      /* Reset default unordered list display style to remove bulleting/spacing */
-      #wd-navbar ul {
+     #wd-navbar ul {
         list-style: none;
         margin: 0;
         padding: .3em;
@@ -57,151 +56,75 @@
         border-left: 1px solid #ccc;
         border-right: 1px solid #ccc;
       } 
-		h1{
-			background-color: blue;
-		}
-		 @keyframes layer2Anim {
-                0%{
-		            opacity:0;
-	            }
-                17%{
-		            opacity:0;
-	            }
-                33%{
-		            opacity:1;
-	            }
-                50%{
-		            opacity:1;
-	            }
-                67%{
-		            opacity:0;
-	            }
-                100%{
-		            opacity:0;
-	            }
-            }
-            @keyframes layer3Anim {
-                0%{
-		            opacity:0;
-	            }
-                50%{
-		            opacity:0;
-	            }
-                67%{
-		            opacity:1;
-	            }
-                83%{
-		            opacity:1;
-	            }
-                100%{
-		            opacity:0;
-	            }
-            }
-
-		* {
-                box-sizing: border-box;
-            }
-            html, body {
-            	background-image: url(wood-wallpaper-hd-android.jpg);
-               background-repeat: no-repeat; 
-      background-position: center;   
-    webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-attachment: fixed;
-    background-size: cover;
-    height:100%;
-    width:100%; 
-}   
-                margin: 0;
-                padding: 0;
-                font-family: HelveticaNeue, Helvetica, Arial, sans-serif;
-            }
-            body p{
-            		position: fixed;
-            	  font-size: 2vw;
-                color: #fff;
-                text-shadow: 3px 3px 6px #000;
-                
-                top: 13%;
-            }
-          
-			.trBorder {
-			position: fixed; /* Position the background text */
-  top: 15%; /* At the bottom. Use top:0 to append it to the top */
-  background: rgb(0, 0, 0); /* Fallback color */
-  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
-  color: #f1f1f1; /* Grey text */
-  width: 25%; /* Full width */
-  
-    				}
-            /*SLIDESHOW*/
-            .layer1, .layer2, .layer3 {
-                position: fixed;
-                width: 50% ;
-                height: 150% ;
-                top: 15%;
-                left: 25%;
-                background-size: 100% auto;
-                background-repeat: no-repeat;
-            }
-            .layer1 {
-                background-image: url(Untitled.png);   
-            }
-            .layer1 p {
-            	position: fixed;
-                font-size: 3vw;
-                width: 50% ;
-                  top: 20%;
-                color: white;
-                text-shadow: 6px 6px 10px red;
-                text-align: center;
-                
-                }
-            .layer2 {
-                background-image: url(Capture.png);
-                animation: layer2Anim 30s infinite;
-            }
-            .layer3 {
-                background-image: url(maxresdefault.jpg);
-                animation: layer3Anim 30s infinite;
-            }
-       
-        	</style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+       background-image: url('wood-wallpaper-hd-android.jpg');
+    }
+    .backImg{
+      width: 100%;
+      height: 100vh;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    .profile {
+      width: 460px;
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 80px 0; 
+      border-radius: 15px 100px 30px;
+           }
+    img{
+      height: 170px;
+      border-radius: 100%;
+      width: 170px;
+    }
+    .profileText{
+       margin-bottom: 20px;
+       color: black;
+    }
+    .profileText h2 {
+      font-size: 2em;
+      font-weight:500;
+      margin-bottom: 10px;
+    }
+    .profileText h3 {
+      font-size: 2em;
+      font-weight:500;
+      margin-bottom: 10px;
+    }
+    i {
+      color: black;
+      width: 30px;
+    }
+    i:hover {
+      color: blue;
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-	
-	 <div class="layer1"><p><script type="text/javascript">
-					/*This is a use of object reference of Date()*/
-var today = new Date();
-var date =(today.getMonth()+1)+'-'+today.getDate() +'-'+today.getFullYear();
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-				
-					var now = new Date();
-					var hours = now.getHours();
-					
-					if( hours < 12)
-					{
-						document.write("<p> Good Morning </br>"+ time + "</br>" + date + "</p>");
-										
-					}
-					
-					else 
-					{
-						hours = hours - 12;
-								
-						if( hours < 6)
-							document.write("<p> Good Afternoon </br>"+ time + "</br>" + date + "</p>");
-							
-						else
-							document.write("<p> Good Evening </br>"+ time + "</br>" + date + "</p>");
-					}
-
-						</script> </p></div>
-	
-      <div class="layer2"></div>
-        <div class="layer3"></div>
- <div id="wd-navbar">
+  <div class="backImg">
+    <div class="profile">
+      <img src="IMG_3868[721].jpg">
+      <div class="profileText">
+        <h2 ><strong>Umaid Ali Khalid</strong></h2>
+        <h4>Student at <a href="https://www.kean.edu/"><u><i>Kean University</i></u></a></h4></br>
+        <p style="font-size: 12px;font-weight: bold">BS.COMPUTER SCIENCE| PROGRAMMER </p>
+      </div>
+      <div class="profileFonts">
+      <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
+      <a href="#"><i class="fa fa-instagram fa-2x"></i></a>
+      <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+    </div>
+  </div> 
+</div>
+<div id="wd-navbar">
       <ul>
         <li>
           <a href="/">Home</a>
@@ -235,6 +158,5 @@ var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(
         </li>
       </ul>
     </div>
-    <p><div class="trBorder ">Ali</br>iuhiknk</div></p>
 </body>
 </html>
