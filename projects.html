@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Me</title>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+         #wd-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: black;
+        z-index: 2;
+      }
+     #wd-navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: .3em;
+      }
+      /* Stack LI elements horizontally instead of the default vertical orientation */
+      #wd-navbar li {
+        float: left;
+        margin-right: 5px;
+      }
+      /* Turns the links into larger clickable boxes */
+      #wd-navbar li a {
+        display: block;
+        background-color: black;
+        border: 1px solid black;
+        padding: .5em;
+      }
+      /* Pseudo selector used for a usability aid, so you know when you can click */
+      #wd-navbar li a:hover {
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+      }
+      /* Hides nested hierarchy links by default */
+      #wd-navbar li ul {
+        display: none;
+        position: absolute;
+        padding: 0;
+      }
+      /* Shows nested hierarchy links when we mouseover the parent */
+      #wd-navbar li:hover ul {
+        display: block; 
+      }
+      /* Overrides the style on line 23 for nested link collections */
+      #wd-navbar li li {
+        float: none;
+        border-bottom: 1px solid #ccc; /* border-top causes IE bug */
+      }
+      /* Different styling for nested hierarchy links. */
+      #wd-navbar li li a {
+        border: 0;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+      } 
+      a{
+        color: white;
+      }
+    	body{
+    		margin: 0;
+    		padding: 0;
+    		font-family: sans-serif;
+    	}
+    	.container
+    	{ 
+    		position: relative;
+    		width: 1200px;
+    		height: 300px;
+    		margin: 100px auto;
+    		
+    	}
+    	.container .box 
+    	{
+    		position: relative;
+    		width: calc(400px - 30px);
+    		height: calc(300px - 30px);
+    		background: black;
+    		float: left;
+    		margin: 15px;
+    		box-sizing: border-box;
+    		overflow: hidden;
+    		border-radius: 10px;
+    		    	}
+    	.container .box .icon 
+    	{
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		width: 100%;
+    		height: 100%;
+    		background: #f00;
+    		transition: 0.5s;
+    		z-index: 1;
+    	}
+    	.container .box:hover .icon 
+    	{
+    		top: 20px;
+    		left: calc(50% - 40px);
+    		width: 80px;
+    		height: 80px;
+    		border-radius: 50%;
+    	}
+    	.container .box .icon .fa
+    	{
+    		position: absolute;
+    		top: 50%;
+    		left: 50%;
+    		transform: translate(-50%,-50%);
+    		font-size: 80px;
+    		transition: 0.5s;
+    		color: #fff;	
+    	}
+    	.container .box:hover .icon .fa
+    	{
+    		font-size: 40px;
+    	}
+    	.container .box .content 
+    	{
+    		position: absolute;
+    		top: 100%;
+    		height: calc(100% - 100px);
+    		text-align: center;
+    		padding: 20px;
+    		box-sizing: border-box;
+    		transition: 0.5s;
+    	}
+
+    	.container .box:hover .content 
+    	{
+    		top: 100px;
+    		opacity: 1;
+    	}
+    	.container .box .content h3
+    	{
+    		margin: 0;
+    		padding: 0;
+    		color: #fff;
+    	}
+    	.container .box .content p
+    	{
+    		margin: 0;
+    		padding: 0;
+    		color: #fff;
+    	}
+    	.container .box:nth-child(1) .icon
+    	{
+    		background: green;
+    	}
+    	.container .box:nth-child(1)
+    	{
+    		background: blue;
+    	}
+    	.container .box:nth-child(2) .icon
+    	{
+    		background: red;
+    	}
+    	.container .box:nth-child(2)
+    	{
+    		background: pink;
+    	}
+    	.bar {
+  background-image: linear-gradient(20deg,black 10%,red);
+  width: auto;
+  padding: 70px;
+  margin: 0px;
+  font-size: 50px;
+}
+    	
+    </style>
+</head>
+<body>
+        <div class="bar"><center style='font-size:50px;text-shadow:3px 3px 6px white; color:white'>Projects</center></div>
+
+	<div class="container">
+		<div class="box">
+			<a href="google.com">
+			<div class="icon"><i class="fa fa-user" aria-hidden="true"></i></div>
+			<div class="content">
+				<h3>Searc</h3>
+				<p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+			</div>
+		</a>
+		</div>
+		<div class="box">
+			<div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+			<div class="content">
+				<h3>Searc</h3>
+				<p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+			</div>
+		</div>
+		<div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="content">
+                <h3>Searc</h3>
+                <p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="content">
+                <h3>Searc</h3>
+                <p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="content">
+                <h3>Searc</h3>
+                <p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></div>
+            <div class="content">
+                <h3>Searc</h3>
+                <p>dsfsd ggsd gfds ds fds fdsf dsf dsf sdf sdf dsf ds </p>
+            </div>
+        </div>
+    
+	</div>
+    <div id="wd-navbar">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="/services">Portfolio</a>
+        </li>
+        <li>
+          <a href="aboutme.html">About Me</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+          <ul>
+            <li>
+              <a href="mailto:khalidu@kean.edu" class="first">Email Me</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/umaid-ali-khalid-5b537114a/">Linkedin</a>
+            </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
+</body>
+</html>
