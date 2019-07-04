@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: url(backup-center-data-1652178.jpg); 
+    color: black;
+    font-size: 20px;
+  }
+div.gallery {
+  margin: 10px;
+  border: 2px solid #ccc;
+  width: 600px;
+       background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.gallery:hover {
+  border: 1.2px solid black;
+}
+
+div.gallery img {
+  width: 600px;
+  height: auto;
+}
+li{
+  font-size: 15px;
+}
+div.desc {
+  padding: 15px;
+   text-align: justify;
+}
+.bar {
+    background-color: rgba(255, 255, 255, 0.5);
+  width: auto;
+  padding: 10px;
+  margin: 0px;
+  font-size: 23px;
+}
+</style>
+</head>
+<body>
+  <center><h1>Banking System</h1></center>
+  <hr>
+  <div class="bar"><p>Banking system which enable the users to login into their bank accounts to check their latest balance, track all of their transactions, deposit or withdrawal money, delete the history of transactions and update the side notes simultaneously.</p></div>
+  <center>
+<div class="gallery">
+    <img src="Untitled.png">
+  <div class="desc">Main page for users to login into their accounts. This page contains following options:  <li>Link to display the sensitive information of customers for testing purpose</li>
+    <li>
+      Two textboxes for customers to enter login ID and password, and a submit button
+    </li>
+    <li>
+      Moreover, POST method is used to implement the HTML FORM. 
+    </li></div>
+</div>
+<center>
+<div class="gallery">
+  <a target="_blank" href="Customer1.png">
+    <img src="Customer.png">
+  </a>
+  <div class="desc">These are all the users exist in database and information related to them. Click on the picture to check constraints and fields of the table.</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="login.png">
+  <div class="desc">User will be directed to this page after a successful login. Login consider to be successful if a user successfully passes the authentication process. Authentication process include following requirements: <li>Customer login and password will be read from the table called <b>Customers</b> which is shown prior to this picture. </li><li>The input login should NOT be case sensitive, but the password should be case sensitive.</li><li>  
+If the login or password is <b>empty</b>, corresponding error messages will be displayed and the program will exit immediately without accessing the database. 
+</li>
+<li>
+If both login and password are not empty, the program will access the table <b>Customers</b> to verify the<b> login</b> and <b>password</b>. 
+</li>
+<li>If the login or username does not exist in the database, an error message “Login XXXX doesn’t exist in the database” will display and program will be terminated.</li>
+<li>Similarly, If the login exists in the database, but password doesn’t match the record in database, an error message “login xxxx exists, but password not matches.” will display and program will be terminated. 
+
+</li>
+<li>If the login and password match the records in the database, <b>“login.php”</b> file will display this page including that user relevant information such as name, DOB, current IP address, age, address, transactions, balance etc.</li></div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="login.png">
+  <div class="desc">Let's talk about the other functions of this page such as logout, add transaction, display and update transaction and search box field:
+  <li><b>Logout </b>link will call a program to clean/expire the cookie. </li><li>All the 3 functions (search, add and update) will check if the cookie was set first. If the cookie is not set, programs should ask users to login first and exit without connecting to the database. </li><li>All the CGI programs are using the POST method, except the <b>Search</b> which will use GET method. </li> </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="addtransaction1.png">
+  <div class="desc"> What does <b>add transaction</b> button perform?
+  <li><b>login.php</b> file would pass customer name to <b>add_transaction.php</b> file. Add transaction page would show the <b>customer name</b> and the <b>balance</b> at the top as shown in the figure. </li>
+  <li>Page would allow the customer to enter transaction <b>code</b> in <b>textbox</b>, select <b>deposit</b> or <b>withdraw </b>(no default) from <b>two radio buttons</b>, enter the <b>amount</b> in <b>textbox</b>, select <b>source name</b> in a <b>dropdown</b> list (no default), and a <b>submit button </b>to add the data into the Money table saved in database. </li>
+  <li>Program  will retrieve all the <b>source id</b> and <b>names</b> first from <b>Sources </b>table, and will only display the <b>source names</b> in the dropdown list for the customer to select and will pass the source id to the next program <b>insert_transaction.php file</b>. </li>
+  <li>After customer clicks the <b>Submit</b> button, a program named “<b>insert_transaction.php</b>” should be called to insert the data into your Money table after verifying the input based on the following requirements.<ul>An error message would appear indicating the problem if <b>the amount is empty, amount <=0, the type (deposit, withdraw) or a source is not selected</b>. </ul><ul>Program will show an error message indicating the problem if <b>the balance is less than the withdraw amount</b>. Program will retrieve and check <b>the latest balance</b> for <b>the logged in customer</b> from the  <b>Money</b> table before inserting the withdraw transaction because the balance in the program might be outdated. </ul> <ul>An error message will pop up indicating the problem if the <b>Same Code exists</b> in the table. </ul><ul>If there is no error, data would be inserted into the <b>Money</b> table. Program will retrieve customer id from the browser cookie and insert the customer id into the field<b> cid</b> of Money table. <b>Negative amount</b> would be inserted into the amount column of Money table if it is <b>withdraw</b>. </ul><ul>If there is a data error, <b>no data should be added into the Money table</b>. </ul></li> </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+  <a target="_blank" href="Capture2.png">
+    <img src="Capture.png">
+  </a>
+  <div class="desc"> Money table, it contains all of the customers transactions and used <b>cid</b> field to identify which transactions belong to which customers.Click on the picture to check constraints and fields of the table.</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+  <a target="_blank" href="Source1.png">
+    <img src="Source.png">
+  </a>
+  <div class="desc"> Source table, it contains <b>id</b> and <b>name</b> column which is being used in the <b>dropdown list of add transaction page</b> to select the <b>sources</b>.Click on the picture to check constraints and fields of the table.</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="search.png">
+  <div class="desc"><b>Search function</b> on the main page, it will call a program named “<b>search.php</b>” to do the following search functions after clicking on the “<b>Search</b>” button:
+  <li>Program will use the keywords which is entered by customer to do <b>pattern match</b> on the <b>Note</b> columns for<b> the logged in customer</b> in <b> Money</b> table. </li><li>If the keyword is empty, an error message “no keyword entered” should be displayed and the program should not connect/access the database. </li><li>If the keyword is *, all the records (rows and cols or transactions) should be displayed. </li><li>If no record matched, “No record found with the search keyword: ….”  will display. Additionally, no column headers should be displayed. </li> <li>If records found, program will display all matched records in HTML TABLE tag format with headers. </li></div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="update.png">
+  <div class="desc"><b>Display and Update transaction:</b>
+    <li>If customer clicks on “<b>Display and update transaction</b>” link, a program named “<b>display_update_transcation.php</b>” should show all the customer’s transactions from <b>Money </b> table on webpage as shown in Figure. </li><li>The <b>Note</b> field is <b>updateable</b> and <b>highlighted in yellow</b>. All other columns are Non-updateable fields. </li>
+    <li> <b>Delete</b> column has the HTML <b>checkbox</b> for each record after the <b>Note</b> column. </li>
+    <li>If customer clicks on “<b>Update transaction</b>” button, a program named “<b>update_transcation.php</b>” should be called to do the <b>followings</b>: 
+    <ul>If a record’s <b>delete</b> checkbox is checked, that record should be deleted from <b>Money</b> table. A message “The Code xxxx has been deleted from the database.” should be displayed for<b> each deleted record</b>. </ul><ul>If a record’s delete checkbox is not checked, but the <b>Note</b> was updated, program should update the<b> Note</b> column of the <b>corresponding record </b>in the <b>Money</b> table. A message “The Note for code xxxx has been updated in the database.” should be displayed for each updated record. </ul><ul> Program can handle mixing delete and update operations. All the change and delete should be successfully done by <b>ONE</b> click, and other not changed records should not be updated. </ul><ul>Message indicating<b> the # of deleted records and the # of updated records</b> will display after successful execution. </ul><ul>Corresponding error message will display and indicate the <b>Code</b> of the record if an error happens during the delete or update. </ul></li></div>
+</div>
+</center>
+</body>
+</html>
