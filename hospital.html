@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: url(needle.png); 
+         background-attachment: fixed; 
+    color: black;
+    font-size: 20px;
+  }
+div.gallery {
+  margin: 10px;
+  border: 2px solid #ccc;
+  width: 600px;
+       background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.gallery:hover {
+  border: 1.2px solid black;
+}
+
+div.gallery img {
+  width: 600px;
+  height: auto;
+}
+li{
+  font-size: 15px;
+}
+div.desc {
+  padding: 15px;
+   text-align: justify;
+}
+.bar {
+    background-color: rgba(0, 0, 255, 0.1);
+  width: auto;
+  padding: 10px;
+  margin: 0px;
+  font-size: 23px;
+}
+table {
+  color: black;
+  font-size: 20px;
+  }
+  td {
+    padding: 10px;
+    width: 400px;
+  }
+
+</style>
+</head>
+<body>
+  <center><h1>Hospital Login Portal</h1></center>
+  <hr>
+  <div class="bar"><p>Login portal is specifically designed and developed to ease lives of doctors and patients. This will minimize the load of paperwork for both doctors and patients since most of the work would be handled smoothly from Portfolio such as monitoring appointments, medications, patients, doctors etc.</p></div>
+ <center>
+<div class="gallery">
+    <img src="tools.PNG">
+  <div class="desc"><table border="1">
+List of Programming languages and tools used in this project:
+<tr>
+<th>Programming languages</th>
+<th>Tools</th>
+
+</tr>
+<tr>
+<td><li>HTML</li>
+  <li>JavaScript</li>
+<li>CSS</li>
+<li>Php</li>
+<li>MySQL</li></td>
+<td><li>Sublime text editor</li>
+<li>Xampp server</li></td>
+</tr>
+</table></div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="litable.PNG">
+  <div class="desc">
+    Four tables are used to do this project:
+    <li>Appointment Table</li>
+    <li>Patient Table</li>
+    <li>Doctor Table</li>
+    <li>Medication Table</li>
+</center>
+  <center>
+<div class="gallery">
+    <a target="_blank" href="sign.png">
+    <img src="sign.png">
+  </a>
+  <div class="desc">Main page for users to login into their accounts. This page contains following options:  <li>Links to display the sensitive information of doctors and patients for testing purpose</li>
+    <li>
+      Radio buttons for corresponding users to select
+    </li>
+    <li>
+      Two textboxes for users to enter login ID and password, and a submit button
+    </li>
+    <li>
+      Moreover, POST method is used to implement the HTML FORM. 
+    </li></div>
+</div>
+<center>
+<div class="gallery">
+
+    <img src="appachedata.PNG">
+  <div class="desc">These are all the users exist in database and information related to them. </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+   <a target="_blank" href="de.PNG">
+    <img src="pidi.PNG">
+  </a>
+  <div class="desc">
+    Users will have to enter their credentials and select an appropriate radio button to sign in:
+    <li>Doctors will have to select a doctor option after entering their login information</li>
+    <li>Similarly, patients will have to select a patient option after entering their login information</li>
+    <li>In case of picking wrong option, user will be promoted to error message. Click on the picture to check that error message.</li>
+  </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+
+    <img src="psidsi.PNG">
+  <div class="desc">User will be directed to the appropriate page after a successful login. Login consider to be successful if a user successfully passes the authentication process. Authentication process include following requirements: <li>User login and password will be read from the table called <b>Patients or Doctors</b> which are shown prior to above picture. </li><li>The input login should NOT be case sensitive, but the password should be case sensitive.</li><li>  
+If the login or password is <b>empty</b>, corresponding error messages will be displayed and the program will exit immediately without accessing the database. 
+</li>
+<li>
+If both login and password are not empty, the program will access the table <b>Patients</b> or <b>Doctors</b> to verify the<b> login</b> and <b>password</b>. 
+</li>
+<li>If the login or username does not exist in the database, an error message “Login XXXX doesn’t exist in the database” will display and program will be terminated.</li>
+<li>Similarly, If the login exists in the database, but password doesn’t match the record in database, an error message “login xxxx exists, but password not matches.” will display and program will be terminated. 
+
+</li>
+<li>If the login and password match the records in the database, <b>“New php”</b> file will display appropriate page including that user relevant information</li> </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="pp.PNG">
+  <div class="desc"> What does <b>Profile logo</b> mean in both patients and Doctors page?
+Profile logo contains relevant information of the user such as username, ID, First Name, Last Name, Gender, DOB, Email Address, Blood Type and Address and Doctor name for patient user only. 
+  </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="dassm.PNG">
+  <div class="desc">
+    Assign Medication <b>Logo</b> on <b>Doctors Page</b>:<br>
+    Doctors can easily assign medications to<b> their patients</b> by using the <b>patient ID</b> and <b>Medicine Names</b>. Name of the medicine will be prominent to patient on his <b>portal</b> after a doctor will click <b>Assign Medications</b> button and receives a message that medications are assigned <b>successfully</b></div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="dapp3.PNG">
+  <div class="desc"> Appointments <b>Logo</b> on <b>Doctors Page</b>: <br>
+    <li>All of the upcoming appointments with patients will display on this page and erase automatically after the date and time will expire
+      <li>It is also demonstrated on the pictures clearly</li>
+        </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="dlp.PNG">
+  <div class="desc">List of Patients <b>Logo</b> on <b>Doctors</b> Page:<br>
+    Doctors can pull up the list of their patients by clicking on this logo which consists of patients ID, First Name, Last Name, Gender and Email Address.
+  </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="pme3.PNG">
+  <div class="desc">Medications <b>Logo</b> on <b>Patients</b> page: <br>
+    <li>Patients can check the names of their assigned medications from here</li>
+    <li>Name of the medication will appear here if any of the medication is assigned by the doctor.
+Otherwise, “No medications assigned”  message will pop up</li>
+</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+  <a href="papp2.PNG">
+    <img src="papp3.PNG">
+  </a>
+  <div class="desc"> Appointments <b>Logo</b> on <b>Patients Page</b>: <br>
+    <li>Patients can make an appointment from here</li>
+    <li>Weekly time slots of doctor availability will show here and patients will be able to make an appointment with their doctors on suitable time.</li>
+    <li>Please click on the picture to have a clear vision of this page </li>
+</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="papph.PNG">
+  <div class="desc"> History <b>Logo</b> on <b>Patients Page</b>: <br>
+    <li>This page contains the history of all appointments for patients</li>
+   
+</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <img src="hlogout.png">
+  <div class="desc">
+
+User will be directed to this page after signing out from the portal and leads to the sign in page from there automatically after 2 seconds
+</div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <video width="600" height="240" controls>
+  <source src="Video-Sat-Jul-13-2019-19-55-15.mp4" type="video/mp4">
+ 
+</video>  <div class="desc">Demo</div>
+</div>
+</center>
+</body>
+</html>
