@@ -1,26 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <title>Umaid Ali Khalid</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <style>
-    /* Remove the navbar's default margin-bottom and rounded borders */ 
-    .navbar {
-      margin-bottom: 0;
-      border-radius: 0;
-      z-index: 1;
+	<title>Umaid Ali Khalid</title>
+	<meta charset="UTF-8"/>
+	<style type="text/css">
+     #wd-navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        border-bottom: 2px solid #ccc;
+        background: #f9f9f1;
+      }
+     #wd-navbar ul {
+        list-style: none;
+        margin: 0;
+        padding: .3em;
+      }
+      /* Stack LI elements horizontally instead of the default vertical orientation */
+      #wd-navbar li {
+        float: left;
+        margin-right: 5px;
+      }
+      /* Turns the links into larger clickable boxes */
+      #wd-navbar li a {
+        display: block;
+        background-color: #f9f9f9;
+        border: 1px solid #f9f9f9;
+        padding: .5em;
+      }
+      /* Pseudo selector used for a usability aid, so you know when you can click */
+      #wd-navbar li a:hover {
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+      }
+      /* Hides nested hierarchy links by default */
+      #wd-navbar li ul {
+        display: none;
+        position: absolute;
+        padding: 0;
+      }
+      /* Shows nested hierarchy links when we mouseover the parent */
+      #wd-navbar li:hover ul {
+        display: block; 
+      }
+      /* Overrides the style on line 23 for nested link collections */
+      #wd-navbar li li {
+        float: none;
+        border-bottom: 1px solid #ccc; /* border-top causes IE bug */
+      }
+      /* Different styling for nested hierarchy links. */
+      #wd-navbar li li a {
+        border: 0;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+      } 
+    *{
+      padding: 0;
+      margin: 0;
     }
-    
-    /* Add a gray background color and some padding to the footer */
-    footer {
-      background-color: #f2f2f2;
-      padding: 25px;
-    }
-     body{
+    body{
        background: url('wood-wallpaper-hd-android.jpg')  no-repeat center center fixed ;
      -webkit-background-size: cover;
    -moz-background-size: cover;
@@ -39,8 +79,10 @@
       color: white;
     }
     .profile {
+
       position: fixed;
       width: 460px;
+      background-color: rgba(255, 255, 255, 0.4);
       padding: 80px 0; 
       border-radius: 15px 100px 30px;
            }
@@ -51,7 +93,7 @@
     }
     .profileText{
        margin-bottom: 20px;
-       color: white;
+       color: black;
     }
     .profileText h2 {
       font-size: 2em;
@@ -64,46 +106,17 @@
       margin-bottom: 10px;
     }
     i {
-      color: white;
+      color: black;
       width: 30px;
     }
     i:hover {
       color: blue;
     }
   </style>
-   <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#">Portfolio</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="#">Resume</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-         <li class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu">
-          <li><a href="mailto:khalidu@kean.edu">Email me</a></li>
-          <li><a href="https://www.linkedin.com/in/umaid-ali-khalid-5b537114a/">Linkedin</a></li>
-      
-        </ul>
-      </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-   <div class="backImg">
+  <div class="backImg">
     <div class="profile">
       <img src="IMG_3868[721].jpg">
       <div class="profileText">
@@ -118,7 +131,33 @@
     </div>
   </div> 
 </div>
-
-</div><br><br>
+<div id="wd-navbar">
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="projects.html">Projects</a>
+        </li>
+        <li>
+          <a href="/services">Portfolio</a>
+        </li>
+        <li>
+          <a href="aboutme.html">About Me</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+          <ul>
+            <li>
+              <a href="mailto:khalidu@kean.edu" class="first">Email Me</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/umaid-ali-khalid-5b537114a/">Linkedin</a>
+            </li>
+            </ul>
+          </ul>
+        </li>
+      </ul>
+    </div>
 </body>
 </html>
