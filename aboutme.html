@@ -1,103 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>About Me</title>
-    <meta charset="UTF-8"/>
-    <style type="text/css">
-         #wd-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        border-bottom: 2px solid #ccc;
-        background: #f9f9f1;
-      }
-     #wd-navbar ul {
-        list-style: none;
-        margin: 0;
-        padding: .3em;
-      }
-      /* Stack LI elements horizontally instead of the default vertical orientation */
-      #wd-navbar li {
-        float: left;
-        margin-right: 5px;
-      }
-      /* Turns the links into larger clickable boxes */
-      #wd-navbar li a {
-        display: block;
-        background-color: #f9f9f9;
-        border: 1px solid #f9f9f9;
-        padding: .5em;
-      }
-      /* Pseudo selector used for a usability aid, so you know when you can click */
-      #wd-navbar li a:hover {
-        background-color: #333;
-        color: #fff;
-        text-decoration: none;
-      }
-      /* Hides nested hierarchy links by default */
-      #wd-navbar li ul {
-        display: none;
-        position: absolute;
-        padding: 0;
-      }
-      /* Shows nested hierarchy links when we mouseover the parent */
-      #wd-navbar li:hover ul {
-        display: block; 
-      }
-      /* Overrides the style on line 23 for nested link collections */
-      #wd-navbar li li {
-        float: none;
-        border-bottom: 1px solid #ccc; /* border-top causes IE bug */
-      }
-      /* Different styling for nested hierarchy links. */
-      #wd-navbar li li a {
-        border: 0;
-        border-left: 1px solid #ccc;
-        border-right: 1px solid #ccc;
-      } 
-        body {
-    /* Typography Declarations */
-    color: #222222;
-    font-size: 1em;
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
-}
+  <title>Umaid Ali Khalid</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-  text-align: center;
-}
-
-.masthead {
-  padding: 6em 0;
-  background-image: url('https://i.imgur.com/yGmrlyg.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top: solid 1em #FFCF33;
-}
-
-.masthead-intro {
-    /* Layout Declarations */
-    margin-bottom: 0.1em;
-    /* Typography Declarations */
-    font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 2em;
-}
-
-.masthead-heading {
-    /* Layout Declarations */
-    color: #F1C863;
-    margin-top: -0.2em;
-    /* Typography Declarations */
-    font-family: "Open Sans", "Helvetica Neue", sans-serif;
-    font-weight: bold;
-    font-size: 6em;
-    letter-spacing: -0.02em;
-    text-transform: uppercase;
-}
-
-.introduction-section,
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+      z-index: 1;
+    }
+    
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: grey;
+      padding: 25px;
+    }
+    .introduction-section,
 .location-section,
 .questions-section {
     max-width: 38em;
@@ -126,94 +50,44 @@
 section > h1 {
     margin-top: 2em;
 }
-
-.content-footer,
-.masthead-heading,
-.masthead-intro {
-  text-align: center;
-}
-
-.masthead {
-  padding: 6em 0;
-  background-image: url('simple-background-wallpaper-hd.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-top: solid 1em orange;
-}
-
-.masthead-intro {
-  margin-bottom: 0.1em;
-  font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 2em;
-}
-
-.masthead-heading {
-  margin-top: -0.2em;
-  font-family: "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: bold;
-  font-size: 6em;
-  letter-spacing: -0.02em;
-  text-transform: uppercase;
-}
-.introduction > p,
-.location > p,
-.content-footer > p {
-    /* Typography Declarations */
-    font-weight: 300;
-    letter-spacing: 0.05em;
-}
-h2 {
-    /* Typography Declarations */
-    font-family: "Gentium Book Basic", Georgia, serif;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.introduction-section,
-.location-section,
-.questions-section {
-    max-width: 38em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2em;
-}
-.content-footer {
-  margin: 50px 0;
-  padding: 20px 0;
-  text-align: center;
-  background-color: #73A8C2;
-  text-decoration: none;
-}
-.social > li {
-  display: inline-block;
-  margin: 0 5px;
-}
-.content-footer > p {
-  color: #F7EDE1;
-}
-a {
-    font-weight: bold;
-    text-decoration: none;
-    color: #F1C863;
-}
-  
-@media only screen and (max-width: 500px) {
-    .masthead {
-        padding: 3em 0;
-    }
-    .masthead-heading {
-        font-size: 3em;
-    }
-    .content-footer {
-        padding: 2em 2.5em;
-  }
-}
-    </style>
-    <body>
-<header class='masthead'>
-  <p class='masthead-intro'>Hello, I am</p>
-  <h1 class='masthead-heading'>Umaid Ali!</h1>
-</header>
+  </style>
+   
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+     
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="#">Resume</a></li>
+        <li class="active"><a href="aboutme.html">About Me</a></li>
+         <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Contact
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+          <li><a href="mailto:khalidu@kean.edu">Email me</a></li>
+          <li><a href="https://www.linkedin.com/in/umaid-ali-khalid-5b537114a/">Linkedin</a></li>
+      
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron" style="background-image: linear-gradient(20deg,black 20%,grey); color: white">
+  <div class="container text-center">
+    <p style=" font-family:cursive;font-size: 50px">Hello, I am <br> Umaid Ali!</p>   
+  </div>
+</div>
 <section class="introduction-section">
     <h1>Intro</h1>
     <p>I am currently an undergraduate student at <a href="https://www.kean.edu/"><i>Kean University</i></a> with the major of Computer Science.I indulge myself in writing a code or playing with it. Moreover, I love to meet new folks and exchange my ideas with them.</p>
@@ -241,43 +115,12 @@ a {
     <h2>Where do I live?</h2>
     <p>I live in Roselle Park,NJ, 07204</p>
 </section>
-
-<footer class="content-footer">
-    <p>Social Media</p>
-    <ul class="social">
-        <li><a class="css-is-deranged" href="https://www.facebook.com/ali.khalid.3551380">Facebook</a></li>
-        <li><a class="css-is-deranged" href="https://twitter.com/Alikhal80653233">Twitter</a></li>
-        <li><a class="css-is-deranged" href="https://www.instagram.com/alikhalid_741/">Instagram</a></li>
-    </ul>
-  
+<footer class="container-fluid text-center">
+   <h3>Social Media</h3>
+        <p><a href="https://www.facebook.com/ali.khalid.3551380"><font color="black">Facebook</font></a></p>
+        <p><a  href="https://twitter.com/Alikhal80653233"><font color="black">Twitter</font></a></p>
+        <p><a  href="https://www.instagram.com/alikhalid_741/"><font color="black">Instagram</font></a></p>
+    
 </footer>
-<div id="wd-navbar">
-      <ul>
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li>
-          <a href="projects.html">Projects</a>
-        </li>
-        <li>
-          <a href="/services">Portfolio</a>
-        </li>
-        <li>
-          <a href="aboutme.html">About Me</a>
-        </li>
-        <li>
-          <a href="">Contact</a>
-          <ul>
-            <li>
-              <a href="mailto:khalidu@kean.edu" class="first">Email Me</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/umaid-ali-khalid-5b537114a/">Linkedin</a>
-            </li>
-            </ul>
-          </ul>
-        </li>
-      </ul>
-    </div>
 </body>
 </html>
