@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+       background-image: url(sort.jpg); 
+
+  background-attachment: fixed; 
+    color: black;
+    font-size: 20px;
+  }
+div.gallery {
+  margin: 10px;
+  border: 2px solid #ccc;
+  width: 600px;
+       background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.gallery:hover {
+  border: 1.2px solid black;
+}
+
+div.gallery img {
+  width: 600px;
+  height: auto;
+}
+li{
+  font-size: 15px;
+}
+div.desc {
+  padding: 15px;
+   text-align: justify;
+}
+.bar {
+    background-color: rgba(0, 0, 255, 0.1);
+  width: auto;
+  padding: 10px;
+  margin: 0px;
+  font-size: 23px;
+}
+table {
+  color: black;
+  font-size: 20px;
+  }
+  td {
+    padding: 10px;
+    width: 400px;
+  }
+
+</style>
+</head>
+<body>
+  <center><h1 style="color: white">Sorting CSV file based on the given options</h1></center>
+    <center><a href="http://yoda.kean.edu/~khalidu/CPS3525/upload.html" style="color: white">Click here to access the program itself</a></center>
+  <hr>
+ <center>
+<div class="gallery">
+    <img src="tools.PNG">
+  <div class="desc"><table border="1">
+List of Programming languages and tools used in this project:
+<tr>
+<th>Programming languages</th>
+<th>Tools</th>
+
+</tr>
+<tr>
+<td><li>HTML</li>
+<li>CSS</li>
+<li>Php</li>
+</td>
+<td><li>Sublime text editor</li>
+<li>Linux Server</li></td>
+</tr>
+</table></div>
+</div>
+</center>
+  <center>
+<div class="gallery">
+    <a target="_blank" href="sort1.PNG">
+    <img src="sort1.PNG">
+  </a>
+  <div class="desc">Main page for users. This page contains following options:  <li>Link to download the CSV file for testing</li>
+    <li>
+      Option to input the file
+    </li>
+    <li>
+      Dropdown list to sort based on subject
+    </li>
+   </div>
+</div>
+<center>
+<div class="gallery">
+   
+    <img src="sort2.PNG">
+  <div class="desc">
+    <li>It displays the file path</li>
+    <li>It displays the file size. If the file size is smaller than 10 bytes or bigger than 1000 byes, an error message “File size is not within the range, upload failed!” will be given.</li>
+    <li>If the file is not a CSV text format, it displays an error message “File is in wrong format. Only text format is allowed”</li>
+    <li>If the file is in CSV text format and number of column is NOT 4, it displays an error message “The text has wrong number of columns, upload failed!”</li>
+    <li>If there is no error, the file should be uploaded successfully and program should display a message “The file **** has been successfully uploaded.”</li>
+    <li>If there is no error, it displays the original roster included the header, all the columns and rows, average of each subject, average of each student in HTML TABLE format</li>
+    <li>If there is no error, it displays the sorted output in HTML TABLE format on the browser, The output should include student name, and the selected subject(s) only, average of each subject, and average of each student on the selected subjects. The output should be sorted by the Avg from high to low and the averages should have only ONE decimal. Sorting is done by php program</li>
+    
+  </div>
+</div>
+</center>
+
+<center>
+<div class="gallery">
+    <video width="600" height="240" controls>
+  <source src="screen-recorder-wed-aug-05-2020-16-42-31.mp4" type="video/mp4">
+ 
+</video>  <div class="desc">Demo</div>
+</div>
+</center>
+</body>
+</html>

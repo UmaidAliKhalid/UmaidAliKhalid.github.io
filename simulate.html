@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body{
+    background-image: url(simulate2.jpg); 
+             background-attachment: fixed; 
+    color: black;
+    font-size: 20px;
+  }
+div.gallery {
+  margin: 10px;
+  border: 2px solid #ccc;
+  width: 600px;
+       background-color: rgba(255, 255, 255, 0.5);
+}
+
+div.gallery:hover {
+  border: 1.2px solid black;
+}
+
+div.gallery img {
+  width: 600px;
+  height: auto;
+}
+li{
+  font-size: 15px;
+}
+div.desc {
+  padding: 15px;
+   text-align: justify;
+}
+.bar {
+    background-color: rgba(255, 255, 255, 0.8);
+  width: auto;
+  padding: 10px;
+  margin: 0px;
+  font-size: 23px;
+}
+table {
+  color: black;
+  font-size: 20px;
+  }
+  td {
+    padding: 10px;
+    width: 400px;
+  }
+
+</style>
+</head>
+<body>
+  <center><h1>Simulate the SQL join, group by & order by functions</h1></center>
+  <center><h3><a href="http://yoda.kean.edu/~khalidu/CPS3525/project2.html">Live demo</a></h3></center>
+  <hr>
+  <div class="bar"><p>This project is to simulate the SQL join, group by and order by functions, print the results on the browser and send an email to the user with a hyperlink to your result file.</p></div>
+ <center>
+<div class="gallery">
+    <img src="tools.PNG">
+  <div class="desc"><table border="1">
+List of Programming languages and tools used in this project:
+<tr>
+<th>Programming languages</th>
+<th>Tools</th>
+
+</tr>
+<tr>
+<td><li>HTML</li>
+<li>CSS</li>
+<li>Python</li>
+<li>Java</li>
+<li>CGI</li></td>
+<td><li>Sublime text editor</li>
+<li>Server</li></td>
+</tr>
+</table></div>
+</div>
+</center>
+  <center>
+<div class="gallery">
+    <img src="simulate1.PNG">
+  <div class="desc">Main page for users. This page contains following options:  <li>Link to download the CSV files for testing</li>
+    <li>Zipcode input file has 21 columns with the zipcode, state, AvgWages, Estimated Population etc information, and the number of rows could be vary</li>
+    <li>The 2nd state input file has 8 columns with the state, its capital, area, etc information for the 50 states.</li>
+    <li>
+   Options to input the file
+    </li>
+    <li>Upload button </li></div>
+</div>
+<center>
+<div class="gallery">
+    <img src="simulate2.PNG">
+  <div class="desc">
+    <li>After click the “Upload” button, a Python program named project2.cgi will be called to receive the two uploaded files and save them at upload folder. The Python program will then run Java program (source code is Project2.java) to process these two uploaded CSV files.</li>
+    <li>A Java program (Project2.java) will first implement the SQL database join, group by and order by functions and should print the results in HTML TABLE format - a state summary table for each state</li>
+    <li>The joined results and calculated values would be accurate. A program will join both files, group the data for each state and calculate the values.</li>
+    <li>Each state in the zipcode URL should have only one row. If a state is not in the zipcode file, it should NOT be in the summary table</li>
+    <li>The output would be aligned well. The capital should left-aligned and numbers should be right-aligned. The average AvgWages should have one decimal</li>
+    <li>The results should be sorted by Average_AvgWages from high to low</li>
+    <li>The same Java program should show the following information under summary table: Zipcode 10156 at NORWALK, CA has the maximum population 78,458 with AvgWages $18703.5 </li>
+    <li>The maximum population zipcode and calculated results should be accurately displayed</li>
+    <li>The numbers should right-aligned in currency format. The average AvgWages should have only decimal, and the population should have no decimal</li>
+    <li>If the numeric column is empty or N/A, it should not include that record in the average. It should be still included in the count (number_of_zipcodes)</li>
+    <li>The Java program will use the same function/method to print the output on the screen and save the same output into a file in HTML format at the same folder. Then, a Python program should catch the Java printout (NOT read from file) to display on the browser</li>
+    <li>A Java program will handle the following errors/exceptions and print the corresponding messages</li>
+    <li>Any exceptions happened during the processing the files</li>
+    <li>After the Java program executed and the results displayed on the browser, Python program will send an email to the programmer with Subject:  project 2 result. The email body will state “The Java program was run at DATE/TIME stamp, and the result is available to view at HTML_LINK.” The link would be URL of Project2_results.html. When the programmer clicks on the link, the results will be displayed on the browser – the same as Java program’s output on the browser</li>
+  </div>
+</div>
+</center>
+<center>
+<div class="gallery">
+    <video width="600" height="240" controls>
+  <source src="screen-recorder-wed-aug-05-2020-17-59-19.mp4" type="video/mp4">
+ 
+</video>  <div class="desc">Demo</div>
+</div>
+</center>
+</body>
+</html>
